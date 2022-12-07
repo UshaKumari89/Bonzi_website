@@ -1,134 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BonziHotels</title>
     <!--font awesome icons-->
-    <script
-      src="https://kit.fontawesome.com/d3e1f8ffba.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d3e1f8ffba.js" crossorigin="anonymous"></script>
     <!--Custom css-->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <!--navigation with logo and login starts here-->
-    <header class="header">
-        <img src="assets/logo/logo.png" alt="logo" class="header__logo">
-        <nav>
-            <ul class = "nav__links">
-                <li class = "nav__items"><a href="index.html">Home</a></li>
-                <li class = "nav__items"><a href="#">Facilities</a></li>
-                <li class = "nav__items"><a href="contact.html">Contact</a></li>
-                <li class = "nav__items"><a href="gallery.html">Gallery</a></li>
-                <li class = "nav__items"><a href="#">FAQ</a></li>
-            </ul>
-        </nav>
-   <button class="button">BOOK A ROOM</button>
-    </header>
-    <!--navigation with logo and login ends here-->
-    <!--hero section start here-->
-    <section class = "hero">
-        <h1>Bonz.ai</h1>
-        <h6>up to 30% off if you book through our website</h6>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--navigation with logo and login starts here-->
+        <header class="header">
+            <img src="assets/logo/logo.png" alt="logo" class="header__logo">
+            <input id="menu-toggle" type="checkbox">
+            <label class='menu-button-container' for="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+          
+                <ul class="nav__links">
+                    <li class="nav__items"><a href="index.html">Home</a></li>
+                    <li class="nav__items"><a href="facilities.html">Facilities</a></li>
+                    <li class="nav__items"><a href="contact.html">Contact</a></li>
+                    <li class="nav__items"><a href="gallery.html">Gallery</a></li>
+                    <li class="nav__items"><a href="#">FAQ</a></li>
+                </ul>
+            
+            <button class="button">BOOK A ROOM</button>
+        </header>
+        <!--navigation with logo and login ends here-->
+
+        <!--hero section start here-->
+        <main class="hero">
+            <h1>Bonz.ai</h1>
+            <h6>up to 30% off if you book through our website</h6>
+        </main>
+        <!--hero section end here-->
+
+        <!--booking section start here-->
+        <article class="booking__bar">
+            <div class="booking__bar_items">
+                <label for="text">
+                    <i class="fa-solid fa-calendar"></i>
+                    Check in
+                </label>
+            </div>
+            <div class="booking__bar_items">
+                <label for="text">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    Check out
+                </label>
+            </div>
+            <div class="booking__bar_items">
+                <label for="text">
+                    <i class="fa-solid fa-person"></i>
+                    Adaults
+                </label>
+            </div>
+            <div class="booking__bar_items">
+                <label for="text">
+                    <i class="fa-sharp fa-solid fa-person-shelter"></i>
+                    Rooms
+                </label>
+            </div>
+
+            <button type="submit" class=" button booking-bar__button">BOOK NOW</button>
+
+        </article>
+        <!--booking section end here-->
+
+        <!--Gallery section start here-->
+        <article class="gallery">
+            <h2> Our Gallery</h2>
+            <article class="gallery__img">
+                <article class="gallery__img-one"></article>
+                <article class="gallery__img-two"></article>
+                <article class="gallery__img-three"></article>
+                <article class="gallery__img-four"></article>
+                <article class="gallery__img-five"></article>
+                <article class="gallery__img-six"></article>
+                <article class="gallery__img-seven"></article>
+                <article class="gallery__img-eight"></article>
+                <article class="gallery__img-nine"></article>
+            </article>
+        </article>
+        <!--Gallery section end here-->
+
+        <!--our room section start here-->
+        <section class="rooms">
+            <h2>Our Rooms</h2>
+            <section class="room__cards">
+                <article class="room__cards-card-1">
+                    <img src="assets/photos/03-day.jpg" alt="" class="room__cards-img">
+                    <section class="room__cards-des">
+                        <h3>Space room</h3>
+                        <p class="room__card-info">55 sqm 592 sqft <br>
+                            King bed<br>
+                            2 adults, up to 2 children<br>
+                            Private floatation tanks<br>
+                        </p>
+                    </section>
+                </article>
+                <article class="room__cards-card-2">
+                    <img src="assets/photos/02-day.jpg" alt="" class="room__cards-img">
+                    <section class="room__cards-des">
+                        <h3>The colony</h3>
+                        <p class="room__card-info">55 sqm 592 sqft <br>
+                            King bed<br>
+                            2 adults, up to 2 children<br>
+                            Private floatation tanks<br>
+                        </p>
+                    </section>
+                </article>
+                <article class="room__cards-card-3">
+                    <img src="assets/photos/01-day.jpg" alt="" class="room__cards-img">
+                    <section class="room__cards-des">
+                        <h3>bonz.ai experience</h3>
+                        <p class="room__card-info">55 sqm 592 sqft <br>
+                            King bed<br>
+                            2 adults, up to 2 children<br>
+                            Private floatation tanks<br>
+                        </p>
+                    </section>
+                </article>
+
+            </section>
+        </section>
+        <!--our room section end here-->
+
+        <!--facilities section start here-->
+        <section class="facilities">
+            <h2>Facilities</h2>
+            <article class="facility__sec">
+                    <section class="facilities__top-left">
+                        <div class="facilities__line"></div>
+                        <div  class="facilities__desc">
+                            <h3>AI POWERED & ECO FRIENDLY</h3>
+                             <p class="facilities__text">We built our own motherboard called the "HIVEMIND" that connect the
+                            hardware to the software. Our algorithms controleverything about your stay by monitoring your 
+                            energy and resources consumption, comfort and may your stay complete autonomous.</p>
+                           <button class="button">Read More</button>
+                        </div>
+                    </section>
+    
+                    <section class="facilities__top-right">
+                        <img src="assets/photos/09-day.jpg" alt="">
+                    </section>
+
+    <section class="facilities__bottom-left">
+        <img src="assets/photos/09-day.jpg" alt="">
     </section>
-    <!--hero section end here-->    
-     <!--booking section start here-->
-    <article class="booking__bar">
-        <section class="booking__bar_items">
-            <label for="">
-                <i class="fa-solid fa-calendar"></i>
-                check in
-            </label>
-        </section>
-        <section class="booking__bar_items">
-            <label for="">
-                <i class="fa-solid fa-calendar-days"></i>
-                check out
-            </label>
-        </section>
-        <section class="booking__bar_items">
-            <label for="">
-                <i class="fa-solid fa-person"></i>
-                adaults
-            </label>
-        </section>
-        <section class="booking__bar_items">
-            <label for="">
-                <i class="fa-sharp fa-solid fa-person-shelter"></i>
-                rooms
-            </label>
-        </section>
 
-    <button type="submit" class=" button booking-bar__button">BOOK NOW</button> 
-    
-    </article>
-    <!--booking section end here-->
-    
-    <!--Gallery section start here-->
-     <article class = "gallery">
-       <h2> Our Gallery</h2> 
-        <section class="gallery__img">
-            <section class="gallery__img-one"></section>
-            <section class="gallery__img-two"></section>
-            <section class="gallery__img-three"></section>
-            <section class="gallery__img-four"></section>
-            <section class="gallery__img-five"></section>
-            <section class="gallery__img-six"></section>
-            <section class="gallery__img-seven"></section>
-            <section class="gallery__img-eight"></section> 
-            <section class="gallery__img-nine"></section> 
-        </section>
-    </article> 
-    <!--Gallery section end here-->
-    <!--our room section start here-->
-    
-    <section class="rooms">
-        <h2>Our Rooms</h2>
-        <section class="room__cards">
-            <article class="room__cards-card-1">
-                <img src="assets/photos/03-day.jpg" alt="" class="room__cards-img">
-                <section class ="room__cards-des">
-                <h3>Space room</h3>
-                <p class="room__card-info">55 sqm 592 sqft <br>
-                    King bed<br>
-                    2 adults, up to 2 children<br>
-                    Private floatation tanks<br>
-                </p>
-            </section>
-            </article>
-            <article class="room__cards-card-2">
-                <img src="assets/photos/02-day.jpg" alt="" class="room__cards-img">
-                <section class ="room__cards-des">
-                <h3>The colony</h3>
-                <p class="room__card-info">55 sqm 592 sqft <br>
-                    King bed<br>
-                    2 adults, up to 2 children<br>
-                    Private floatation tanks<br>
-                </p>
-            </section>
-            </article>
-            <article class="room__cards-card-3">
-                <img src="assets/photos/01-day.jpg" alt="" class="room__cards-img">
-                <section class ="room__cards-des">
-                <h3>bonz.ai experience</h3>
-                <p class="room__card-info">55 sqm 592 sqft <br>
-                    King bed<br>
-                    2 adults, up to 2 children<br>
-                    Private floatation tanks<br>
-                </p>
-            </section>
-            </article>
-           
-        </section>
+    <section class="facilities__bottom-right">
+        <div class="facilities__line"></div>
+        <div  class="facilities__desc">
+            <h3>Space Design</h3>
+             <p class="facilities__text">Our rooms are designed to transport you into an environment made for leisure. 
+                Take your mind off the day-to-day of home life and find a private paradise for yourself.</p>
+           <button class="button">Read More</button>
+        </div>
+      
     </section>
-    <!--our room section end here-->
- 
+
+               
+
+            </article>
+        </section>
+        <!--facilities section end here-->
+
+        <!--contact section-->
+       <section class="contact">
+        <article class="contact__info-section">
+            <div class ="contact__info-section-desc">
+                <h3>We are here for you</h3>
+                <p class="contact__text">
+                    At Bonz Hotels, we take our customers seriously. Do you have any enquiries, <br>
+                    compaints or requests, please forward it to our support desk and we will get <br>
+                    back to you as soon as possible.</p>
+            </div>
+       
+
+        </article>
+            
+        <article class="contact__from-section">
+                <div class="contact__address">
+                    <p>
+                        497 Evergreen Rd. Roseville, <br>
+                        CA 95673 <br>
+                        Phone: +46 012 345 6789 <br>
+                        Email: Contact@bonza.ai</p> <br>
+                  <strong>View on the map</strong>  <br>
+                    <img src="assets/photos/map.jfif" alt="">
+                </div>
+                <form class="contact__from">
+                    <label for="name">Name</label>
+                    <input type="text">
+                    <label for="name">Email</label>
+                    <input type="text">
+
+                    <label for="name">Message</label>
+                    <textarea id="" cols="30" rows="12"></textarea><br>
+                    <button class="button" type="submit">Send</button>
+                </form>
+        </article>
+
+        </section>  
+
+
+        <!--footer section start here-->
+        <footer class ="footer">
+            <article class="footer__address">
+                <img src="assets/logo/bonz.ai-logo-white-portrait.png" alt="" class="footer__logo">
+
+                <p>Bonz.ai Hotel</p>
+                <p>Address: Lorem ipsum dolor sit amet</p>
+                <p>Telephone: +46 012 345 67 89</p>
+                <p>Email: Contact@Bonz.ai</p>
+            </article>
+
+
+            <nav class="footer__nav">
+                <h6>Useful links</h6>
+                <ul>
+                    <li class="footer__nav-items">Contact</li>
+                    <li class="footer__nav-items">Gallery</li>
+                    <li class="footer__nav-items">Facilities</li>
+                    <li class="footer__nav-items">Faq</li>
+                </ul>
+              
+            </nav>
+
+            <section class="copyright">
+                <article class="social-icons">
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                   
+                </article>
+                <p>Copyright © 2022. All rights reserved</p>
+            </section>
+            <article class="footer__about">
+                <h6>About</h6>
+                <p class="footer__about-text">Innovative autonomous luxury pod hotels for the <br>
+                    generation Y and Z. A
+                    sanctuary for travellers,
+                    <br>
+                    social media fanatics,
+                    foodies, explorers and digital humans.
+                </p>
+            </article>
+
+
+        </footer>
+          <!--footer section start here-->
+
+    
 
 
 
-   
+
+
     </div>
-  </body>
+</body>
+
 </html>
