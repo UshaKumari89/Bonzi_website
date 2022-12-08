@@ -1,1053 +1,850 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Share&display=swap'); 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Share&display=swap");
 * {
-    box-sizing: border-box;
-    list-style-type: none;
-    text-decoration: none; 
-    overflow-x: hidden;
-   
-    
-   
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  overflow-x: hidden;
 }
 /*general style for body*/
-body{
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--bg-color);
-    scroll-behavior: smooth;
-    font-family: Poppins sans-serif;
- 
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-color);
+  scroll-behavior: smooth;
+  font-family: Poppins sans-serif;
 }
 /*general section*/
 :root {
-    --bg-color:#fff;
-    --black:#000;
-    --orange:#DD5136;
-    --purple:#8e7fb1;
-    --light-purple:#dddbf7;
-    --grey:#6B789A;
-    --border-radius:5px;
+  --bg-color: #fff;
+  --black: #000;
+  --orange: #dd5136;
+  --purple: #8e7fb1;
+  --light-purple: #dddbf7;
+  --grey: #6b789a;
+  --border-radius: 5px;
 }
-h2{
-    font-size: 700;
-    font-size: 2.5rem;
-    line-height: 4.6rem;
-   text-align: center;
+/*main heading*/
+.main_heading {
+  font-weight: 900;
+  font-size: 2.8rem;
+  text-align: center;
 }
-h3{
-    font-weight: 700;
-    font-size: 1.125rem;
-    line-height: 3rem;
-    text-transform: uppercase;
+/* h2 heading*/
+.sub__heading {
+  font-size: 700;
+  font-size: 2.5rem;
+  line-height: 4.6rem;
+  text-align: center;
 }
-/*general style for wrapper*/
-  /* .container{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas: 
-        "header header header header"
-        "hero hero hero hero"
-        "gallery gallery gallery gallery"
-        "rooms rooms rooms rooms"
-        "facilities facilities facilities facilities"
-        "contact contact contact contact"
-        "footer footer footer footer"; 
-       
-    }  */
+/* h3 heading*/
+h3 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+}
+/* h6 heading*/
+h6 {
+  font-size: 2rem;
+  line-height: 4.6rem;
+  font-weight: bold;
+  /* margin: 0; */
+} 
+/*links*/
+ a{
+  color: var(--bg-color);
+} 
+.header__logo, .menu-button-container, .button, .booking__bar_items i,
+.booking__bar_items label, .gallery__img-images, .footer__nav-items, .footer__address{
+  cursor: pointer;
+}
 /***********header section************/
-.header{
-    grid-area: header;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0rem 1.5rem;
-    height: 4rem;
-   
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0rem 1.5rem;
+  height: 4rem;
 }
 /*header section logo*/
-.header__logo{
-    width: 10rem;
-    cursor: pointer;
+.header__logo {
+  width: 10rem;
 }
+
 /*navigation links*/
-.nav__links{
-    display: flex;
-    flex-direction: row;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  .nav__links a{
-    color:black;
-  }
+.nav__links {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0; 
+}
+/*navigation links anchor*/
+.nav__links a {
+  color: black;
+}
+/*navigation links anchor hover over*/
+.nav__links a:hover,.footer__nav-items:hover {
+  color: rgba(00, 00, 00, 0.67);
+  font-size: .9rem;
+  text-decoration: underline; 
+}
 /*hemburger menu*/
-  .menu-button-container {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-  }
+.menu-button-container {
+  display: none;
+  font-size: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 /*toggle button*/
-  #menu-toggle {
-    display: none;
-  }
-  
-  
+#menu-toggle {
+  display: none;
+}
 /*header section links*/
+.nav__links {
+  display: flexa;
+  align-items: center;
+}
 
- .nav__links{
-    display: flex;
-    align-items: center;
-} 
 /*header section links__items*/
-.nav__items{
-    padding: 0.8rem;
-    font-weight: 700;
-    font-size: .75rem;
-     line-height: 1.125;
+.nav__items, .footer__nav-items{
+  padding: 0.6rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.125;
 }
-/*header section links__items color*/
-.nav__items a{
-   color: var(--black);
-}
+
 /*header section button*/
-.button{
-    padding: .7rem 2rem;
-    background-color: var(--purple);
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    border: none;
-    outline: none;
-    color: var(--bg-color);
-    font-weight: 600;
-    -webkit-border-radius: var(--border-radius);
-    -moz-border-radius: var(--border-radius);
-    -ms-border-radius: var(--border-radius);
-    -o-border-radius: var(--border-radius);
-    transition: all .5s ease-in;
-    -webkit-transition: all .5s ease-in;
-    -moz-transition: all .5s ease-in;
-    -ms-transition: all .5s ease-in;
-    -o-transition: all .5s ease-in;
+.button {
+  padding: 0.7rem 2rem;
+  background-color: var(--purple);
+  border-radius: var(--border-radius);
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  color: var(--bg-color);
+  font-weight: 600;
+  transition: all 0.5s ease-in;
 }
-.button:hover{
-    background-color: var(--light-purple); 
-    color: var(--black);
+.button:hover {
+  background-color: var(--light-purple);
+  color: var(--black);
 }
 /************hero section********************/
-
-.hero{
-    grid-area: hero;
-    background-image: url(../assets/photos/02-night.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    color: var(--bg-color);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-   
+.hero {
+  grid-area: hero;
+  background-image: url(../assets/photos/02-night.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--bg-color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
-/*hero section heading*/
-.hero h1{
-    font-weight:900;
-    font-size: 5rem;
-   
-}
-/*hero section  description*/
-.hero h6{
-    font-size:2rem;
-    line-height: 4.6rem;
-    font-weight:bold;
-
-}
-/*hero section start here*/
 /*******************booking section start here******************/
-.booking__bar{
-    background-color: rgba(00, 00,00, .67);
-    border-radius: 5px;
-    width:50%;
-    padding: 1rem;
-    margin: -2rem auto;
-    display: flex;
-   justify-content: space-evenly;
-   align-items: center;
-   
+.booking__bar {
+  background-color: rgba(00, 00, 00, 0.67);
+  border-radius: 5px;
+  width: 50%;
+  padding: 1rem;
+  margin: -2rem auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 /*booking section items*/
-.booking__bar .booking__bar_items{
-    width: 6rem;
-    height: 2rem;
-    padding: .3rem .5rem;
-    background-color: var(--light-purple);
-    color: var(--black);
-    border-radius: var(--border-radius);
-    
- 
-  
+.booking__bar .booking__bar_items {
+  padding: .5rem 1rem;
+  background-color: var(--light-purple);
+  color: var(--black);
+  border-radius: var(--border-radius);
 }
-.booking__bar_items:hover{
-    background-color: var(--purple);
-    color: var(--bg-color);
+.booking__bar_items:hover {
+  background-color: var(--purple);
+  color: var(--bg-color);
 }
-.booking__bar_items label{
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-   
-
+/*booking section label*/
+.booking__bar_items label {
+  font-size: 1rem;
+  font-weight: 500;
 }
-.booking__bar_items i{
-    font-size: 12px;
-    cursor: pointer;
-
+/*booking section icon*/
+.booking__bar_items i {
+  font-size: 16px;
 }
 /*booking section button*/
-.booking-bar__button{
-    background-color: var(--orange);
-
-  
+.booking-bar__button {
+  background-color: var(--orange);
 }
-
-.booking-bar__button:hover{
-    background-color: var(--grey);
-  
+/*booking section button hover*/
+.booking-bar__button:hover {
+  background-color: var(--grey);
 }
-
 /**********************Gallery section start here**********************/
-.gallery{
-   grid-area: gallery;
-   margin-bottom:1rem ;
+.gallery {
+  grid-area: gallery;
+  margin-bottom: 1rem;
 }
-
 /*Gallery img section */
-.gallery__img{
-    display: grid;
-    grid-template-columns:repeat(5, 1fr) ;
-    gap:1rem;
-    grid-template-areas:
-     ". gallery__img-one gallery__img-two gallery__img-four ."
-     ". gallery__img-one gallery__img-three gallery__img-four ."
-     ". gallery__img-five gallery__img-six gallery__img-seven ."
-     ". gallery__img-eight gallery__img-six gallery__img-nine ."; 
+.gallery__img {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  grid-template-areas:
+    ". gallery__img-one gallery__img-two gallery__img-four ."
+    ". gallery__img-one gallery__img-three gallery__img-four ."
+    ". gallery__img-five gallery__img-six gallery__img-seven ."
+    ". gallery__img-eight gallery__img-six gallery__img-nine .";
 }
-
+/*Gallery img section common style for images */
+.gallery__img-images {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 1.3s;
+  opacity: .7;
+ }
+/*Gallery img section common style for images annimation*/
+.gallery__img-images:hover {
+  opacity: .9;
+  transform: scale(1.05);
+ }
 /*Gallery section image__1 */
-.gallery__img-one{
-    grid-area: gallery__img-one;
-    background-image: url(../assets/photos/01-day.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 25rem;
+.gallery__img-one {
+  grid-area: gallery__img-one;
+  background-image: url(../assets/photos/01-day.jpg);
+  height: 25rem;
 }
 /*Gallery section image__2 */
-.gallery__img-two{
-    grid-area: gallery__img-two;
-    background-image: url(../assets/photos/01-night.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+.gallery__img-two {
+  grid-area: gallery__img-two;
+  background-image: url(../assets/photos/01-night.jpg);
 }
 /*Gallery section image__3 */
-.gallery__img-three{
-    grid-area: gallery__img-three;
-    background-image: url(../assets/photos/02-day.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+.gallery__img-three {
+  grid-area: gallery__img-three;
+  background-image: url(../assets/photos/02-day.jpg);
 }
 /*Gallery section image__4 */
-.gallery__img-four{
-    grid-area: gallery__img-four;
-    background-image: url(../assets/photos/05-day.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
- 
-
+.gallery__img-four {
+  grid-area: gallery__img-four;
+  background-image: url(../assets/photos/05-day.jpg);
 }
 /*Gallery section image__5 */
-.gallery__img-five{
-    grid-area: gallery__img-five;
-    background-image: url(../assets/photos/03-night.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size:cover;
-
+.gallery__img-five {
+  grid-area: gallery__img-five;
+  background-image: url(../assets/photos/03-night.jpg);
 }
 /*Gallery section image__6 */
-.gallery__img-six{
-    grid-area: gallery__img-six;
-    background-image: url(../assets/photos/04-day.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 25rem;
-
+.gallery__img-six {
+  grid-area: gallery__img-six;
+  background-image: url(../assets/photos/04-day.jpg);
+  height: 25rem;
 }
 /*Gallery section image__7*/
-.gallery__img-seven{
-    grid-area: gallery__img-seven;
-    background-image: url(../assets/photos/05-day.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  
+.gallery__img-seven {
+  grid-area: gallery__img-seven;
+  background-image: url(../assets/photos/05-day.jpg);
 }
 /*Gallery section image__8*/
-.gallery__img-eight{
-    grid-area: gallery__img-eight;
-    background-image: url(../assets/photos/06-day.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.gallery__img-eight {
+  grid-area: gallery__img-eight;
+  background-image: url(../assets/photos/06-day.jpg);
 }
 /*Gallery section image__9*/
-.gallery__img-nine{
-    grid-area: gallery__img-nine;
-    background-image: url(../assets/photos/07-night.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+.gallery__img-nine {
+  grid-area: gallery__img-nine;
+  background-image: url(../assets/photos/07-night.jpg);
 }
-
 /***********************room section start here************************/
-.rooms{
-    grid-area: room;
+.rooms {
+  grid-area: room;
 }
 /*room cards*/
-.room__cards{
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    gap:.5rem;
-    grid-template-areas: 
-    ". room__cards-card-1 room__cards-card-2 room__cards-card-3 .";
+.room__cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+  grid-template-areas: ". room__cards-card-1 room__cards-card-2 room__cards-card-3 .";
 }
 /*room cards images*/
-.room__cards-img{
-    width: 14rem;
-    height: 11rem;
-    border-radius: 25px;
-     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+.room__cards-img {
+  width: 14rem;
+  height: 11rem;
+  transition: transform 500ms ease-in-out 25ms;
+  border-radius: 25px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.room__cards-img:hover {
+  transform: translateX(3px) translateY(3px);
 }
 /*room cards description*/
-.room__cards-des{
-    text-align: center;
-}/*room cards info*/
-.room__card-info{
-    font-weight: 300;
-    font-size: .625rem;
-    line-height: .625rem;
+.room__cards-des {
+  text-align: center;
+}
+/*room cards info*/
+.room__card-info {
+  font-weight: 300;
+  font-size: 0.625rem;
+  line-height: 0.625rem;
 }
 /*room cards_1*/
-.room__cards-card-1{
-    grid-area:room__cards-card-1;
+.room__cards-card-1 {
+  grid-area: room__cards-card-1;
 }
 /*room cards_2*/
-.room__cards-card-2{
-    grid-area:room__cards-card-2;
+.room__cards-card-2 {
+  grid-area: room__cards-card-2;
 }
-
 /*room cards_3*/
-.room__cards-card-3{
-    grid-area:room__cards-card-3;
+.room__cards-card-3 {
+  grid-area: room__cards-card-3;
 }
 /************facilities section start here*********/
-.facilities{
-    grid-area: facilities;
- 
+.facilities {
+  grid-area: facilities;
 }
 /*facility section*/
-.facility__sec{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
+.facility__sec {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
     ". facilities__top-left facilities__top-right ."
-    ". facilities__bottom-left facilities__bottom-right ." ;
-}  
+    ". facilities__bottom-left facilities__bottom-right .";
+}
 /*facility section line*/
 .facilities__line {
-    border-left: 1.5px solid var(--black);
-    height:18rem;
-    
+  border-left: 1.5px solid var(--black);
+  height: 18.5rem;
 }
 /*facility section description*/
-.facilities__desc{
+.facilities__desc {
   padding: 0 1rem;
 }
-/*facility section description text*/
-.facilities__text{
-    font-weight: 400;
-    font-size: 1rem;
 
+/*facility section description text*/
+.facilities__text {
+  font-weight: 400;
+  font-size: 1rem;
 }
 /*facility section description heading*/
-  .facilities__desc h3{
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    margin-top: -.5rem;
+.facilities__desc h3 {
+  margin: -0.5rem 0 .5rem;
 }
 /*facility section top-left*/
-.facilities__top-left{
-    grid-area:facilities__top-left ;
-    display: flex;
-    padding: 1rem;
+.facilities__top-left {
+  grid-area: facilities__top-left;
+  display: flex;
+  padding: 1rem;
 }
 /*facility section top-righ*/
-.facilities__top-right{
-    grid-area:facilities__top-right;
-    padding: 1rem;
-
+.facilities__top-right {
+  grid-area: facilities__top-right;
+  padding: 1rem;
 }
 /*facilitysection  images*/
-.facilities img{
-    height:18.5rem;
+.facilities img {
+  height: 18.5rem;
 }
 /*facility section bottom-left*/
-.facilities__bottom-left{
-    grid-area: facilities__bottom-left;
-    padding: 1rem;
+.facilities__bottom-left {
+  grid-area: facilities__bottom-left;
+  padding: 1rem;
 }
 /*facility section bottom-right*/
-.facilities__bottom-right{
-    grid-area: facilities__bottom-right;
-    display: flex;
-    padding: 1rem ;
-    
+.facilities__bottom-right {
+  grid-area: facilities__bottom-right;
+  display: flex;
+  padding: 1rem;
 }
-
 /*************contact section start here**********/
 /*contact section*/
-.contact{
-    grid-area: contact;
-    margin-bottom: 2rem;
- 
+.contact {
+  grid-area: contact;
+  margin-bottom: 2rem;
 }
-.contact__info-section{
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: ". contact__info-section-desc contact__info-section-desc .";
-  
-   
+.contact__info-section {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: ". contact__info-section-desc contact__info-section-desc .";
 }
-.contact__info-section-desc{
-    grid-area: contact__info-section-desc;
+.contact__info-section-desc {
+  grid-area: contact__info-section-desc;
 }
- .contact__from-section{
-    grid-area:contact__from-section;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 1rem;
-    grid-template-areas: 
-    ". contact__address contact__from .";
-
+.contact__from-section {
+  grid-area: contact__from-section;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  grid-template-areas: ". contact__address contact__from .";
 }
-.contact__address{
-    grid-area:contact__address ;
-    display: flex;
-    flex-direction: column;
+.contact__address {
+  grid-area: contact__address;
+  display: flex;
+  flex-direction: column;
 }
-.contact__address p{
-    margin-top: 0;
+.contact__address p {
+  margin-top: 0;
 }
-.contact__from{
-    grid-area: contact__from;
-    display: flex;
-    flex-direction: column;
-
-
-   
-}  
-.contact__from input{
-    height:2rem
-   
+.contact__address img {
+  height: 19rem;
 }
-
-
-
-
-
-
-
-
-
+.contact__from {
+  grid-area: contact__from;
+  display: flex;
+  flex-direction: column;
+}
+.contact__from input {
+  height: 2rem;
+}
+.contact__from label {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 2rem;
+}
+.contact__from .button {
+  margin-top: 1rem;
+}
 /*****************footer************************/
-.footer{
-    grid-area: footer;
-    background-color: var(--black);
-    color: var(--bg-color);
-    border-top: 6px solid var(--bg-color);
-    padding: 2rem;
-    grid-area: footer;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: 
-    " footer__address footer__nav copyright footer__about";
+.footer {
+  grid-area: footer;
+  background-color: var(--black);
+  color: var(--bg-color);
+  border-top: 6px solid var(--bg-color);
+  padding: 2rem;
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: " footer__address footer__nav copyright footer__about";
 }
 /*footer heading*/
 footer h6 {
-    font-size: 1rem;
-    text-transform: uppercase;
-  }
-  /*footer logo*/
- .footer__logo {
-    width: 6rem;
-  } 
-    /*footer address*/
-  .footer__address {
-    grid-area:footer__address ;
-    font-size: 13px;
-    line-height: 20px;
-    cursor: pointer;
-   
-  }
-   /*footer address and footer nav*/
-  .footer__nav,
-  .footer__about {
-    display: flex;
-    flex-direction: column;
-  
-  }
-    /*footer footer nav*/
-  .footer__nav{
-    grid-area: footer__nav;
-  }
-  
-  .footer__nav-items {
-    font-weight: 600;
-    font-size: 12px;
-    padding: 0.5rem;
-    cursor: pointer;
-  
-  }
-  .footer__nav-items:hover{
-    color: var(--light-purple);
-  text-decoration: underline;
-  font-size: 1rem;
-
-  }
-
-   /*footer copyright*/
-  .copyright{
-    grid-area: copyright;
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-   
-   
-  }
-  /*footer social icon*/
-.social-icons i{
-    font-size: 1.3rem;
-    background-color: var(--bg-color);
-    color: var(--black);
-    border-radius: 50%;
-    padding: .5rem;
-  
+ margin: .5rem 0rem 0rem;
 }
-.social-icons i:hover{
-    background-color: var(--grey);
-    color: var(--bg-color);
-
+/*footer logo*/
+.footer__logo {
+  width: 4.5rem;
 }
-  /*footer social  about*/
-.footer__about{
-    grid-area: footer__about;
-    text-align: center;
-  }
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /***************mobile design****************/
-
-  @media only screen and (max-width: 600px) and (min-width: 375px){
-    .container{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "header"
-        "hero"
-        "gallery"
-        "rooms"
-        "facilities"
-        "contact"
-        "footer"; 
-       
-    } 
-      /************navigation section mobile view********************/
-    .header__logo{
-        width: 8rem;
-        
-    }
-    .menu-button-container {
-        display: flex;
-      }
-      .nav__links {
-        position: absolute;
-        top: 0;
-        margin-top: 50px;
-        left: 0;
-        flex-direction: column;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-      }
-      #menu-toggle ~ .nav__links li {
-         height: 0;
-        margin: 0;
-        padding: 0;
-        border: 0;  
-        /* transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1); */
-      }
-       #menu-toggle:checked ~ .nav__links li {
-        border: 1px solid #333; 
-        height:3em;
-        padding: 0.5em; 
-        /* transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1); */
-      }
-      .nav__links > li {
-        display: flex;
-        justify-content: center;
-       width: 100%;
-        background-color: white;
-      }
-      /* .nav__links > li:not(:last-child) {
-        border-bottom: 1px solid #444;
-      } */
-      header button{
-        display: none;
-      }
-
-      /*navigation section style end for mobile*/
-
-
-      /************hero section mobile view********************/
-
-.hero{
-   height: 40vh;
- 
- 
+/*footer address*/
+.footer__address {
+  grid-area: footer__address;
+  font-size: 13px;
+  line-height: 20px;
 }
-.hero h1{
-  font-size: 4rem;
+/*footer address and footer nav*/
+.footer__nav,
+.footer__about,.copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
-.hero h6{
-    font-size:1.5rem;
+/*footer footer nav*/
+.footer__nav {
+  grid-area: footer__nav;
 }
-
-/*******************booking section mobile view******************/
-.booking__bar{
-    width:90%;
- }
-/*booking section items*/
-
-.booking__bar_items{
-    margin: .3rem;
- 
-}
-/*booking section items label*/
-.booking__bar_items label{
-    font-size: .8rem;
+.footer__nav ul {
+  margin: 0;
+  padding: 0;
 } 
+/*footer copyright*/
+.copyright {
+  grid-area: copyright;
+  justify-content: flex-end
+}
+/*footer social icon*/
+.social-icons i {
+  font-size: 1.3rem;
+  background-color: var(--bg-color);
+  color: var(--black);
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+.social-icons i:hover {
+  background-color: var(--grey);
+  color: var(--bg-color);
+}
+/*footer social  about*/
+.footer__about {
+  grid-area: footer__about;
 
-.booking-bar__button{
-    padding: .2rem 1rem;
-    font-weight: 400;
-    font-size: .9rem;
-}
-/********************gallery mobile view***********************/
-.gallery__img{
-    grid-template-columns: repeat(2,1fr);
-    grid-template-areas:
-     "gallery__img-one gallery__img-one"
-     "gallery__img-two gallery__img-three"
-     "gallery__img-two gallery__img-four"
-     "gallery__img-five gallery__img-six"
-     "gallery__img-seven gallery__img-seven"
-     "gallery__img-eight gallery__img-nine"
-    
-}
- .gallery__img{
-    margin: 1rem;
-} 
-.gallery__img-one,.gallery__img-two,.gallery__img-seven{
-    height: 20rem;
 }
 
-.gallery__img-eight{
-    height: 9.4rem;
-    
-} */
-
-/***********************room section mobile view************************/
-
-/*room cards*/
-.rooms{
-    margin:0rem 1rem;
-   
-  }
-.room__cards{
-    margin:0rem  1rem;
+/***************mobile design for index page****************/
+@media only screen and (max-width: 600px) and (min-width: 375px) {
+  .container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: 
-    "room__cards-card-1"
-    "room__cards-card-2"
-    "room__cards-card-3";
-}
-/*room cards images*/
-.room__cards-img{
+    grid-template-areas:
+      "header"
+      "hero"
+      "gallery"
+      "rooms"
+      "facilities"
+      "contact"
+      "footer";
+  }
+  .main_heading {
+    font-size: 3.5rem;
+
+  }
+  /************navigation section mobile view********************/
+  .header__logo {
+    width: 8rem;
+  }
+  .menu-button-container {
+    display: flex;
+  }
+  .nav__links {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle~.nav__links li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+  #menu-toggle:checked~.nav__links li {
+    border: 1px solid var(--black); 
+    height: 3em;
+    padding: 0.5em;
+  }
+  .nav__links>li {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+  }
+.header button {
+    display: none;
+  }
+/************hero section mobile view********************/
+  .hero {
+    height: 40vh;
+  }
+  .hero h6{
+    font-size: 1.2rem;
+  }
+  /*******************booking section mobile view******************/
+  .booking__bar {
+    width: 90%;
+  }
+  .booking__bar_items {
+    margin: 0.3rem;
+  }
+  .booking__bar_items label {
+    font-size: 0.8rem;
+  }
+  /********************gallery mobile view***********************/
+  .gallery__img {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "gallery__img-one gallery__img-one"
+      "gallery__img-two gallery__img-three"
+      "gallery__img-two gallery__img-four"
+      "gallery__img-five gallery__img-six"
+      "gallery__img-seven gallery__img-seven"
+      "gallery__img-eight gallery__img-nine";
+  }
+  .gallery__img {
+    margin: 1rem;
+  }
+  .gallery__img-one,
+  .gallery__img-two,
+  .gallery__img-seven {
+    height: 20rem;
+  }
+  .gallery__img-eight {
+    height: 9.4rem;
+  }
+  /***********************room section mobile view************************/
+/*room cards*/
+  .rooms {
+    margin: 0rem 1rem;
+  }
+  .room__cards {
+    margin: 0rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "room__cards-card-1"
+      "room__cards-card-2"
+      "room__cards-card-3";
+  }
+  .room__cards-img {
     width: 100%;
     height: 20rem;
-
-}
-
-/*room cards info*/
-.room__card-info{
+  }
+  .room__card-info {
     font-weight: 500;
-    font-size: .8rem;
+    font-size: 0.8rem;
     line-height: 1rem;
-}
-
+  }
 /************facilities section start here*********/
-
-/*facility section*/
-.facilities{
-    margin: 0rem .5rem;
-}
-.facility__sec{
+  .facilities {
+    margin: 0rem 0.5rem;
+  }
+.facility__sec {
     grid-template-areas:
-    "facilities__top-left facilities__top-left facilities__top-right facilities__top-right"
-    "facilities__bottom-left facilities__bottom-left facilities__bottom-right facilities__bottom-right" ;
-}  
-
+      "facilities__top-left facilities__top-left facilities__top-right facilities__top-right"
+      "facilities__bottom-left facilities__bottom-left facilities__bottom-right facilities__bottom-right";
+  }
 /*************contact section mobile**********/
-
-.contact{
+.contact {
     margin: 0rem 1.5rem 2rem 1.5rem;
-}
-
-.contact__info-section{
-   grid-template-columns:  1fr;
+  }
+.contact__info-section {
+    grid-template-columns: 1fr;
     grid-template-areas: "contact__info-section-desc";
-}
-.contact__from-section{
-  grid-template-columns: 1fr;
-    grid-template-areas: 
-    "contact__address"
-    "contact__from";
-}
- /*************footer section mobile**********/
-.footer{
+  }
+.contact__from-section {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "contact__address"
+      "contact__from";
+  }
+/*************footer section mobile**********/
+  .footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    grid-template-areas: 
-    " footer__address footer__nav"
-    "footer__about copyright ";
-}
-.footer h6{
-    margin-top: 0;
-    margin-bottom: .3rem;
-
-}
-
-/*footer logo*/
- .footer__logo {
-    width: 3rem;
-  } 
-/*footer social  about*/
-.footer__about{
-    text-align: left;
+    grid-template-areas:
+      " footer__address footer__nav"
+      "footer__about copyright ";
   }
+  .footer__logo {
+    width: 3rem;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-    }
-   
 /*******************************facilities page***************************/
-.container_facilities{
-    display: grid;
-    grid-template-columns: repear(4, fr);
-    grid-template-areas: 
+.container_facilities {
+  display: grid;
+  grid-template-columns: repear(4, fr);
+  grid-template-areas:
     "facilities__hero facilities__hero facilities__hero facilities__hero"
     "facilities__card-container facilities__card-container facilities__card-container facilities__card-container"
     "bg__poster bg__poster bg__poster bg__poster"
     "facility__information facility__information facility__information facility__information"
     "facilities__gallery facilities__gallery facilities__gallery facilities__gallery"
-    ". facilities__news facilities__news . "
-   
+    ". facilities__news facilities__news . ";
 }
 /* hero section facility page*/
-.facilities__hero{
-    grid-area: facilities__hero;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--black);
-    height: 17.375rem;
-    color:var(--bg-color)
-   
-}
-/* hero section heading facility page*/
-.facilities__hero h1{
-    font-weight:900;
-    font-size: 2.8rem;
-    text-align: center;
-   
+.facilities__hero {
+  grid-area: facilities__hero;
+  background-image: none;
+  background-color: var(--black);
+  height: 17.375rem;
 }
 /*hero section pargraph*/
-.facilities__hero p{
-    font-weight: 600;
-    font-size: 0.75rem;
-    line-height: 28px;
-    text-align: center;
-  
-
+.facilities__hero p {
+  font-weight: 600;
+  font-size: 0.75rem;
+  line-height: 28px;
+  text-align: center;
 }
-/*facilities card in facility page*/
 
+/*facilities card in facility page*/
 .facilities__card-container {
-    grid-area:facilities__card-container;
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-areas:
+  grid-area: facilities__card-container;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas:
     ". facilities__card-1 facilities__card-2 facilities__card-3 . "
     ". facilities__card-4 facilities__card-5 facilities__card-6 . ";
-    margin: 2rem 0;
-  
-    }
-    .facilities__card-1{
-        grid-area:facilities__card-1 ;
-    }
-    .facilities__card-2{
-        grid-area:facilities__card-2 ;
-    }
-    .facilities__card-3{
-        grid-area:facilities__card-3 ;
-    }
-    .facilities__card-4{
-        grid-area:facilities__card-4 ;
-    }
-    .facilities__card-5{
-        grid-area:facilities__card-5 ;
-    }
-    .facilities__card-6{
-        grid-area:facilities__card-6 ;
-    }
-    /* facilities__card--title in facility page*/
-  .facilities__card--title {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 24px;
-    text-transform: uppercase;
-  }
-    /* facilities__card--text in  facility page*/
-  .facilities__card--text {
-    font-weight: 300;
-    font-size: 10px;
-    line-height: 18px;
-    letter-spacing: -0.2px;
-  }
-  
+  margin: 2rem 0;
+}
+.facilities__card-1 {
+  grid-area: facilities__card-1;
+}
+.facilities__card-2 {
+  grid-area: facilities__card-2;
+}
+.facilities__card-3 {
+  grid-area: facilities__card-3;
+}
+.facilities__card-4 {
+  grid-area: facilities__card-4;
+}
+.facilities__card-5 {
+  grid-area: facilities__card-5;
+}
+.facilities__card-6 {
+  grid-area: facilities__card-6;
+}
+
+/* facilities__card--title in facility page*/
+.facilities__card--title {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+/* facilities__card--text in  facility page*/
+.facilities__card--text {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 18px;
+  letter-spacing: -0.2px;
+}
+
 /*bgposter section start here*/
-.bg__poster{
-    grid-area: bg__poster;
-    background: var(--black);
-    color: var(--bg-color);
-    background-image: url("../assets/photos/09-day.jpg");
-    background-position: 90% 50%;
-    background-size: 45%;
-    background-repeat: no-repeat;
-    padding: 2rem;
-    margin: 2rem 0;
-  
-  }
-  /*bgposter section heading */
-  .bg__poster h2 {
-    font-weight: 700;
-    line-height:2.6rem;
-    font-size: 2.8rem;
-    text-transform: uppercase;
-    text-align: left;
-    overflow-y: hidden;
-  }
-    /*bgposter section paragraph */
-  .bg__poster p {
-    font-weight: 500;
-    font-size: .8rem;
-    line-height: 1.3rem;
-    text-transform: uppercase;
-    padding: 1rem 0;
-  }
-    /*bgposter section button*/
-.bg-poster__buttons:first-child {
-    margin-right: 2rem;
-  } 
-  
+.bg__poster {
+  grid-area: bg__poster;
+  background: var(--black);
+  color: var(--bg-color);
+  background-image: url("../assets/photos/09-day.jpg");
+  background-position: 90% 50%;
+  background-size: 45%;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+/*bgposter section heading */
+.bg__poster h2 {
+   text-align: left;
+  line-height: 2.6rem;
+   overflow-y: hidden;
+}
+
+/*bgposter section paragraph */
+.bg__poster p {
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  text-transform: uppercase;
+  padding: 1rem 0;
+}
+
 /*info section in facility page start here*/
-  .facility__information {
-    grid-area: facility__information;
-    padding: 2rem;
-  }
-  /*info heading in facility page*/
-  .information__heading {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
-  }
-    /*info cards container in facility page*/
-  .info__cards--container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
-  }
-     /*info cards facility page*/
-  .info-cards {
-    display: flex;
-    flex-direction: column;
-   justify-content: center; 
-     align-items: center;
-    overflow-y: hidden;
-  }
-     /*info cards heading in facility page*/
-  .info-cards__heading {
-    margin: 0;
-    font-size: 1rem;
-    line-height: 1.3rem;
-    text-transform: uppercase;
-  }
-     /*info cards text in facility page*/
-  .info-cards__text {
-    font-size: .8rem;
-    text-align: center;
-    text-transform: uppercase;
-  }
-    /*facility gallery  in facility page start here*/
-  .facilities__gallery {
-    grid-area: facilities__gallery;
-    display: grid;
-    gap:1rem;
-    grid-template-columns:repeat(4,1fr) ;
-    grid-template-areas:
-    ". facilities__gallery--sec facilities__gallery--sec ."
-   }
-     /*facility gallery*/
-  .facilities__gallery--sec{
-    grid-area: facilities__gallery--sec ;
-    gap: 1rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-areas:
-     "facilities__gallery-img1 text-wrapper facilities__gallery-img2"
-     "facilities__gallery-img3 facilities__gallery-img3 facilities__gallery---btm-txt";
-    }
-         /*facility gallery img 1*/
-.facilities__gallery-img1{
-  grid-area: facilities__gallery-img1;
-  height: 15rem;
+.facility__information {
+  grid-area: facility__information;
+  padding: 2rem;
+}
+/*info heading in facility page*/
+.information__heading {
+  margin-bottom: 3rem; 
+}
+/*info cards container in facility page*/
+.info__cards--container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+
+/*info cards facility page*/
+.info-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+}
+
+/*info cards heading in facility page*/
+.info-cards__heading {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  text-transform: uppercase; 
+}
+
+/*info cards text in facility page*/
+.info-cards__text {
+  font-size: 0.8rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*facility gallery  in facility page start here*/
+.facilities__gallery {
+  grid-area: facilities__gallery;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: ". facilities__gallery--sec facilities__gallery--sec .";
+}
+
+/*facility gallery*/
+.facilities__gallery--sec {
+  margin: 0rem 0rem 1rem 0rem;
+  grid-area: facilities__gallery--sec;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "facilities__gallery-img1 text-wrapper facilities__gallery-img2"
+    "facilities__gallery-img3 facilities__gallery-img3 facilities__gallery---btm-txt";
+}
+.facilities__gallery-images{
+  height: 16rem;
   width: 100%;
   border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
 }
-     /*facility gallery txt*/
-.text-wrapper{
+/*facility gallery img 1*/
+.facilities__gallery-img1 {
+  grid-area: facilities__gallery-img1;
+}
+/*facility gallery txt*/
+.text-wrapper {
   grid-area: text-wrapper;
   display: flex;
   flex-direction: column;
 }
-.text-wrapper h3, .facilities__gallery---btm-txt h3{
-  margin:-.5rem 0;
+.text-wrapper h3,
+.facilities__gallery---btm-txt h3 {
+  margin: -0.5rem 0;
 }
-/* .text-wrapper p, .facilities__gallery---btm-txt p{
-  margin: 0rem;
-} */
-   /*facility gallery img 2*/
-.facilities__gallery-img2{
+/*facility gallery img 2*/
+.facilities__gallery-img2 {
   grid-area: facilities__gallery-img2;
-  height: 15rem;
- width: 100%;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+
 }
-   /*facility gallery img 3*/
-.facilities__gallery-img3{
+/*facility gallery img 3*/
+.facilities__gallery-img3 {
   grid-area: facilities__gallery-img3;
   height: 25rem;
-  width: 100%;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
 }
-   /*facility gallery btm text 3*/
-.facilities__gallery---btm-txt{
+/*facility gallery btm text 3*/
+.facilities__gallery---btm-txt {
   grid-area: facilities__gallery---btm-txt;
   display: flex;
   flex-direction: column;
 }
-
-.facilities__gallery--txt{
+.facilities__gallery--txt {
   font-size: 1rem;
 }
+/*facility news*/
 .facilities__news {
   background: var(--black);
   color: var(--bg-color);
-  grid-area:facilities__news;
+  grid-area: facilities__news;
   display: flex;
   padding: 1.5rem;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 2rem; 
+  margin-bottom: 2rem;
 }
+/*facility news heading*/
 .newsletter__heading {
-  font-size: 2.4rem;
-  line-height: 3rem;  
+   font-size: 2.4rem;
+  line-height: 2rem;
   text-transform: uppercase;
   overflow: hidden;
-
 }
+/*facility news input*/
 .newsletter__input {
   width: 100%;
   padding: 1rem 1.5rem;
@@ -1056,109 +853,184 @@ footer h6 {
   border: none;
 }
 
-
-
 /***************media query facilities page**************************/
 
- @media only screen and (max-width: 600px) and (min-width: 375px){
-    .container_facilities{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "facilities__hero"
-        "facilities__card-container"
-        "bg__poster"
-        "facility__information"
-        "facilities__gallery"
-       "facilities__news"
-   
-    }
-    /*facilities page hero section mobile */
-    .facilities__hero p{
-     margin: 0rem 1rem;
+@media only screen and (max-width: 600px) and (min-width: 375px) {
+  .container_facilities {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "facilities__hero"
+      "facilities__card-container"
+      "bg__poster"
+      "facility__information"
+      "facilities__gallery"
+      "facilities__news";
+  }
+/*facilities page hero section mobile */
+  .facilities__hero p {
+    margin: 0rem 1rem;
     font-weight: 500;
-    
-    }
-        /*facilities page card container section mobile */
-  .facilities__card-container{
-        margin: 2rem;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-         "facilities__card-1 facilities__card-2"
-         "facilities__card-3 facilities__card-4"
-         "facilities__card-5 facilities__card-6"
-       
-
-    } 
-     /*facilities page bg poster section mobile */
-    .bg__poster{
-        background-position: 80% 25%;
-        background-size: 40%;
-    }
-      .bg__poster h2 {
-        line-height:2rem;
-        font-size: 2rem;
-    }
-    .bg__poster p{
-        margin-top: 3rem;
-    }
-      /*info section in facility page mbl */
-     
+  }
+/*facilities page card container section mobile */
+  .facilities__card-container {
+    margin: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "facilities__card-1 facilities__card-2"
+      "facilities__card-3 facilities__card-4"
+      "facilities__card-5 facilities__card-6";
+  }
+/*facilities page bg poster section mobile */
+  .bg__poster {
+    background-position: 80% 25%;
+    background-size: 40%;
+  }
+  .bg__poster h2 {
+    line-height: 2rem;
+    font-size: 2rem;
+  }
+.bg__poster p {
+    margin-top: 3rem;
+  }
+/*info section in facility page mbl */
   .info__cards--container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-    
   }
-   /*info section heading in facility page mbl */
+  /*info section heading in facility page mbl */
   .information__heading {
     font-size: 1.3rem;
     margin-bottom: 1rem;
   }
-     /*info section cards in facility page mbl */
+
+  /*info section cards in facility page mbl */
   .info-cards {
-    justify-content:flex-start; 
-    align-items:flex-start;
-  
+    justify-content: flex-start;
+    align-items: flex-start;
   }
-    /*info section text in facility page mbl */
+  /*info section text in facility page mbl */
   .info-cards__text {
     text-align: left;
-  
-  }  
-   .facilities__gallery{
-    grid-template-columns:1fr 1fr;
-    grid-template-areas:"facilities__gallery--sec facilities__gallery--sec";
-   } 
-
-  
-   .facilities__gallery--sec{
+  }
+  .facilities__gallery {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "facilities__gallery--sec facilities__gallery--sec";
+  }
+.facilities__gallery--sec {
     margin: 1rem;
     grid-template-columns: 1fr;
     grid-template-areas:
-     "facilities__gallery-img1"
-     "text-wrapper"
-     "facilities__gallery-img2"
-     "facilities__gallery---btm-txt"
-    "facilities__gallery-img3"
-     "facilities__gallery-img3"
-    
-   }
-   .facilities__news {
+      "facilities__gallery-img1"
+      "text-wrapper"
+      "facilities__gallery-img2"
+      "facilities__gallery---btm-txt"
+      "facilities__gallery-img3"
+      "facilities__gallery-img3";
+  }
+.facilities__news {
     flex-wrap: wrap;
-
- 
-    
+    justify-content: flex-start;
   }
-  .newsletter__heading {
+.newsletter__heading {
     font-size: 2rem;
-    text-align: left;
- 
   
   }
-  .newsletter__input {
+.newsletter__input {
     width: 80%;
-  
   }
- 
+}
+
+/*******************************contact page start here**********************/
+/*conatct hero section*/
+.contact__hero {
+  grid-area: hero;
+  background-image: url(../assets/photos/09-night.jpg);
+  height: 70vh;
+}
+/*conatct page grid*/
+.contact__container {
+  display: grid;
+  gap: 5rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas: ". contact__calendar-sec contact__calendar-sec contact__form-sec contact__form-sec .";
+  margin: 4rem 0;
+  cursor: pointer;
+}
+/*conatct page calendar section*/
+.contact__calendar-sec {
+  grid-area: contact__calendar-sec;
+}
+/*conatct page calendar*/
+.calendar {
+  width: 100%;
+  border: 1px solid rgb(227, 218, 218);
+  margin-top: 1.4rem;
+}
+/*calendar header*/
+.calendar__header {
+  background-color: var(--purple);
+  height: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--bg-color);
+  padding: 1.5rem;
+  overflow-y: hidden;
+}
+/*calendar days*/
+.calendar__days {
+  background-color: var(--light-purple);
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+/*calendar days text*/
+.calendar__days p {
+  display: flex;
+  justify-content: center;
+}
+/*calendar dates*/
+.calender__dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+/*calendar dates aside */
+.calender__dates aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(213, 212, 211);
+}
+/*calendar dates aside:hover*/
+.calender__dates aside:hover {
+  background-color: var(--light-purple);
+}
+/*calendar weekend*/
+.calender__dates .weekend {
+  background-color: rgb(247, 244, 244);
+}
+.calender__dates .next-month {
+  opacity: 0.4;
+}
+/*calendar today*/
+.calender__dates .today {
+  background-color: var(--purple);
+  color: var(--bg-color);
+}
+.contact__form-sec {
+  grid-area: contact__form-sec;
+}
+/**************************Media query conatct page****************************/
+@media only screen and (max-width: 600px) and (min-width: 375px) {
+  .contact__hero {
+    height: 50vh;
+  }
+  .contact__container {
+    margin: 4rem 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "contact__calendar-sec contact__form-sec ";
+    gap: 2rem;
+  }
 }

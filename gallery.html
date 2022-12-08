@@ -1,122 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BonziHotels</title>
     <!--font awesome icons-->
-    <script src="https://kit.fontawesome.com/d3e1f8ffba.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/d3e1f8ffba.js"
+      crossorigin="anonymous"
+    ></script>
     <!--Custom css-->
-    <link rel="stylesheet" href="css/style.css">
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="wrapper">
-        <!--navigation with logo and login starts here-->
-        <header class="header">
-            <img src="assets/logo/logo.png" alt="logo" class="header__logo">
-            <input id="menu-toggle" type="checkbox">
-            <label class='menu-button-container' for="menu-toggle">
-                <i class="fa-solid fa-bars"></i>
-            </label>
-          
-                <ul class="nav__links">
-                    <li class="nav__items"><a href="index.html">Home</a></li>
-                    <li class="nav__items"><a href="facilities.html">Facilities</a></li>
-                    <li class="nav__items"><a href="contact.html">Contact</a></li>
-                    <li class="nav__items"><a href="gallery.html">Gallery</a></li>
-                    <li class="nav__items"><a href="#">FAQ</a></li>
-                </ul>
-            
-            <button class="button">BOOK A ROOM</button>
-        </header>
-        <!--navigation with logo and login ends here-->
+      <!--navigation with logo and login starts here-->
+      <header class="header">
+        <img src="assets/logo/logo.png" alt="logo" class="header__logo" />
+        <input id="menu-toggle" type="checkbox" />
+        <label class="menu-button-container" for="menu-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </label>
 
-        <!--hero section start here-->
-        <main class="hero">
-            <h1>Our Gallery</h1>
-        </main>
-        <!--hero section end here-->
+        <ul class="nav__links">
+          <li class="nav__items"><a href="index.html">Home</a></li>
+          <li class="nav__items"><a href="facilities.html">Facilities</a></li>
+          <li class="nav__items"><a href="contact.html">Contact</a></li>
+          <li class="nav__items"><a href="gallery.html">Gallery</a></li>
+          <li class="nav__items"><a href="#">FAQ</a></li>
+        </ul>
 
-        <!--booking section start here-->
-        
+        <button type="submit" class="button">
+          <a href="contact.html"> book now</a>
+        </button>
+      </header>
+      <!--navigation with logo and login ends here-->
 
-        <!--Gallery section start here-->
-        <article class="gallery">
-            <h2>Bonzi Rooms</h2>
-            <article class="gallery__img">
-                <article class="gallery__img-one"></article>
-                <article class="gallery__img-two"></article>
-                <article class="gallery__img-three"></article>
-                <article class="gallery__img-four"></article>
-                <article class="gallery__img-five"></article>
-                <article class="gallery__img-six"></article>
-                <article class="gallery__img-seven"></article>
-                <article class="gallery__img-eight"></article>
-                <article class="gallery__img-nine"></article>
-            </article>
+      <!--hero section start here-->
+      <article class="hero">
+        <h1 class="main_heading">Our Gallery</h1>
+      </article>
+      <!--hero section end here-->
+
+      <!--Gallery section start here-->
+      <main class="gallery">
+        <h2 class="sub__heading">Bonzi Rooms</h2>
+        <article class="gallery__img">
+          <article class="gallery__img-one gallery__img-images"></article>
+          <article class="gallery__img-two gallery__img-images"></article>
+          <article class="gallery__img-three gallery__img-images"></article>
+          <article class="gallery__img-four gallery__img-images"></article>
+          <article class="gallery__img-five gallery__img-images"></article>
+          <article class="gallery__img-six gallery__img-images"></article>
+          <article class="gallery__img-seven gallery__img-images"></article>
+          <article class="gallery__img-eight gallery__img-images"></article>
+          <article class="gallery__img-nine gallery__img-images"></article>
         </article>
-        <!--Gallery section end here-->
+      </main>
+      <!--Gallery section end here-->
 
-        
+   
+      <!--footer section start here-->
+      <footer class="footer">
+        <article class="footer__address">
+          <img
+            src="assets/logo/bonz.ai-logo-white-portrait.png"
+            alt=""
+            class="footer__logo"
+          />
 
-        <!--footer section start here-->
-        <footer class ="footer">
-            <article class="footer__address">
-                <img src="assets/logo/bonz.ai-logo-white-portrait.png" alt="" class="footer__logo">
+          <p>Bonz.ai Hotel</p>
+          <p>Address: Lorem ipsum dolor sit amet</p>
+          <p>Telephone: +46 012 345 67 89</p>
+          <p>Email: Contact@Bonz.ai</p>
+        </article>
 
-                <p>Bonz.ai Hotel</p>
-                <p>Address: Lorem ipsum dolor sit amet</p>
-                <p>Telephone: +46 012 345 67 89</p>
-                <p>Email: Contact@Bonz.ai</p>
-            </article>
+        <nav class="footer__nav">
+          <h6>Useful links</h6>
+          <ul>
+            <li class="footer__nav-items"><a href="index.html">Home</a></li>
+            <li class="footer__nav-items"><a href="facilities.html">Facilities</a></li>
+            <li class="footer__nav-items"><a href="contact.html">Contact</a></li>
+            <li class="footer__nav-items"><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </nav>
 
-
-            <nav class="footer__nav">
-                <h6>Useful links</h6>
-                <ul>
-                    <li class="footer__nav-items">Contact</li>
-                    <li class="footer__nav-items">Gallery</li>
-                    <li class="footer__nav-items">Facilities</li>
-                    <li class="footer__nav-items">Faq</li>
-                </ul>
-              
-            </nav>
-
-            <section class="copyright">
-                <article class="social-icons">
-                    <i class="fa-brands fa-youtube"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                   
-                </article>
-                <p>Copyright © 2022. All rights reserved</p>
-            </section>
-            <article class="footer__about">
-                <h6>About</h6>
-                <p class="footer__about-text">Innovative autonomous luxury pod hotels for the <br>
-                    generation Y and Z. A
-                    sanctuary for travellers,
-                    <br>
-                    social media fanatics,
-                    foodies, explorers and digital humans.
-                </p>
-            </article>
-
-
-        </footer>
-          <!--footer section start here-->
-
-    
-
-
-
-
-
+        <section class="copyright">
+          <article class="social-icons">
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </article>
+          <p>Copyright © 2022. All rights reserved</p>
+        </section>
+        <article class="footer__about">
+          <h6>About</h6>
+          <p class="footer__about-text">
+            Innovative autonomous luxury pod hotels for the
+            generation Y and Z. A sanctuary for travellers,
+            social media fanatics, foodies, explorers and digital humans.
+          </p>
+        </article>
+      </footer>
+      <!--footer section start here-->
     </div>
-</body>
-
+  </body>
 </html>
