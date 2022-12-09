@@ -544,7 +544,7 @@ footer h6 {
     height: 40vh;
   }
   .hero h6{
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   /*******************booking section mobile view******************/
   .booking__bar {
@@ -1050,5 +1050,8 @@ footer h6 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "contact__calendar-sec contact__form-sec ";
     gap: 2rem;
+  }
+  .calendar__header h2{
+    font-size: 1rem;
   }
 }
