@@ -13,7 +13,7 @@ body {
   height: 100vh;
   background-color: var(--bg-color);
   scroll-behavior: smooth;
-  font-family: Poppins sans-serif;
+  font-family: "Poppins";
 }
 /*general section*/
 :root {
@@ -27,8 +27,8 @@ body {
 }
 /*main heading*/
 .main_heading {
-  font-weight: 900;
-  font-size: 2.8rem;
+  font-weight: 700;
+  font-size: 2.5rem;
   text-align: center;
 }
 /* h2 heading*/
@@ -37,6 +37,8 @@ body {
   font-size: 2.5rem;
   line-height: 4.6rem;
   text-align: center;
+  overflow-y: hidden;
+
 }
 /* h3 heading*/
 h3 {
@@ -44,6 +46,8 @@ h3 {
   font-size: 1.5rem;
   line-height: 2rem;
   text-transform: uppercase;
+  overflow-y: hidden;
+  
 }
 /* h6 heading*/
 h6 {
@@ -160,7 +164,8 @@ h6 {
 }
 /*booking section items*/
 .booking__bar .booking__bar_items {
-  padding: .5rem 1rem;
+  padding: .4em .8rem;
+
   background-color: var(--light-purple);
   color: var(--black);
   border-radius: var(--border-radius);
@@ -265,9 +270,11 @@ h6 {
 /***********************room section start here************************/
 .rooms {
   grid-area: room;
+ 
 }
 /*room cards*/
 .room__cards {
+ 
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 0.5rem;
@@ -287,12 +294,14 @@ h6 {
 /*room cards description*/
 .room__cards-des {
   text-align: center;
+ 
 }
 /*room cards info*/
 .room__card-info {
   font-weight: 300;
   font-size: 0.625rem;
   line-height: 0.625rem;
+  overflow-y: hidden;
 }
 /*room cards_1*/
 .room__cards-card-1 {
@@ -335,7 +344,7 @@ h6 {
 }
 /*facility section description heading*/
 .facilities__desc h3 {
-  margin: -0.5rem 0 .5rem;
+margin: -0.1rem 0 .5rem;
 }
 /*facility section top-left*/
 .facilities__top-left {
@@ -394,7 +403,7 @@ h6 {
   margin-top: 0;
 }
 .contact__address img {
-  height: 19rem;
+  height: 17rem;
 }
 .contact__from {
   grid-area: contact__from;
@@ -410,9 +419,7 @@ h6 {
   font-weight: 500;
   line-height: 2rem;
 }
-.contact__from .button {
-  margin-top: 1rem;
-}
+
 /*****************footer************************/
 .footer {
   grid-area: footer;
@@ -478,7 +485,7 @@ footer h6 {
 }
 
 /***************mobile design for index page****************/
-@media only screen and (max-width: 600px) and (min-width: 375px) {
+@media only screen and (max-width: 768px){
   .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -541,14 +548,9 @@ footer h6 {
   }
   /*******************booking section mobile view******************/
   .booking__bar {
-    width: 90%;
+    display: none;
   }
-  .booking__bar_items {
-    margin: 0.3rem;
-  }
-  .booking__bar_items label {
-    font-size: 0.8rem;
-  }
+
   /********************gallery mobile view***********************/
   .gallery__img {
     grid-template-columns: repeat(2, 1fr);
@@ -599,9 +601,16 @@ footer h6 {
     margin: 0rem 0.5rem;
   }
 .facility__sec {
+  grid-template-columns: 1fr;
     grid-template-areas:
-      "facilities__top-left facilities__top-left facilities__top-right facilities__top-right"
-      "facilities__bottom-left facilities__bottom-left facilities__bottom-right facilities__bottom-right";
+      "facilities__top-left"
+     "facilities__top-right "
+     "facilities__bottom-right"
+      "facilities__bottom-left";
+   
+  }
+  .facilities__line{
+    height: auto;
   }
 /*************contact section mobile**********/
 .contact {
@@ -756,7 +765,7 @@ footer h6 {
 /*info cards heading in facility page*/
 .info-cards__heading {
   margin: 0;
-  font-size: 1rem;
+  font-size: .9rem;
   line-height: 1.3rem;
   text-transform: uppercase; 
 }
@@ -788,6 +797,9 @@ footer h6 {
     "facilities__gallery-img1 text-wrapper facilities__gallery-img2"
     "facilities__gallery-img3 facilities__gallery-img3 facilities__gallery---btm-txt";
 }
+.facilities__gallery--sec p{
+  font-size: .8rem;
+}
 .facilities__gallery-images{
   height: 16rem;
   width: 100%;
@@ -805,7 +817,10 @@ footer h6 {
 }
 .text-wrapper h3,
 .facilities__gallery---btm-txt h3 {
-  margin: -0.5rem 0;
+  margin: -0.1rem 0;
+}
+ p{
+  font-size: .8rem;
 }
 /*facility gallery img 2*/
 .facilities__gallery-img2 {
@@ -855,7 +870,7 @@ footer h6 {
 
 /***************media query facilities page**************************/
 
-@media only screen and (max-width: 600px) and (min-width: 375px) {
+@media only screen and (max-width: 768px) {
   .container_facilities {
     display: grid;
     grid-template-columns: 1fr;
@@ -869,7 +884,7 @@ footer h6 {
   }
 /*facilities page hero section mobile */
   .facilities__hero p {
-    margin: 0rem 1rem;
+    margin: 0rem 2rem;
     font-weight: 500;
   }
 /*facilities page card container section mobile */
@@ -881,9 +896,12 @@ footer h6 {
       "facilities__card-3 facilities__card-4"
       "facilities__card-5 facilities__card-6";
   }
+  .facilities__hero {
+    height: auto;
+  }
 /*facilities page bg poster section mobile */
   .bg__poster {
-    background-position: 80% 25%;
+    background-position: 80% 30%;
     background-size: 40%;
   }
   .bg__poster h2 {
@@ -891,7 +909,7 @@ footer h6 {
     font-size: 2rem;
   }
 .bg__poster p {
-    margin-top: 3rem;
+    margin-top: 6rem;
   }
 /*info section in facility page mbl */
   .info__cards--container {
@@ -1023,7 +1041,7 @@ footer h6 {
   grid-area: contact__form-sec;
 }
 /**************************Media query conatct page****************************/
-@media only screen and (max-width: 600px) and (min-width: 375px) {
+@media only screen and (max-width: 768px){
   .contact__hero {
     height: 50vh;
   }
