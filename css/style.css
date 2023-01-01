@@ -1048,9 +1048,14 @@ footer h6 {
   }
   .contact__container {
     margin: 4rem 2rem;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "contact__calendar-sec contact__form-sec ";
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "contact__form-sec "
+    "contact__calendar-sec";
     gap: 2rem;
+  }
+  .contact__from .booking-bar__button{
+    margin-top: 2rem;
   }
   .calendar__header h2{
     font-size: 1rem;
